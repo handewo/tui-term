@@ -350,6 +350,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "crossterm"
+version = "0.29.0"
+source = "git+https://github.com/handewo/crossterm.git#bffc0ae267d46bda3753f883df3e3e47edabab82"
+dependencies = [
+ "bitflags 2.11.0",
+ "crossterm_winapi",
+ "derive_more",
+ "mio",
+ "parking_lot",
+ "rustix",
+ "signal-hook",
+ "signal-hook-mio",
+ "winapi",
+]
+
+[[package]]
 name = "crossterm_winapi"
 version = "0.9.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -536,9 +552,9 @@ dependencies = [
 
 [[package]]
 name = "euclid"
-version = "0.22.13"
+version = "0.22.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "df61bf483e837f88d5c2291dcf55c67be7e676b3a51acc48db3a7b163b91ed63"
+checksum = "f1a05365e3b1c6d1650318537c7460c6923f1abdd272ad6842baa2b509957a06"
 dependencies = [
  "num-traits",
 ]
@@ -1260,8 +1276,7 @@ checksum = "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
 [[package]]
 name = "ratatui"
 version = "0.30.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d1ce67fb8ba4446454d1c8dbaeda0557ff5e94d39d5e5ed7f10a65eb4c8266bc"
+source = "git+https://github.com/handewo/ratatui.git#a00a8adc9bc6bab089bee9a565eee9334fa81c28"
 dependencies = [
  "instability",
  "ratatui-core",
@@ -1274,8 +1289,7 @@ dependencies = [
 [[package]]
 name = "ratatui-core"
 version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5ef8dea09a92caaf73bff7adb70b76162e5937524058a7e5bff37869cbbec293"
+source = "git+https://github.com/handewo/ratatui.git#a00a8adc9bc6bab089bee9a565eee9334fa81c28"
 dependencies = [
  "bitflags 2.11.0",
  "compact_str",
@@ -1294,11 +1308,10 @@ dependencies = [
 [[package]]
 name = "ratatui-crossterm"
 version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "577c9b9f652b4c121fb25c6a391dd06406d3b092ba68827e6d2f09550edc54b3"
+source = "git+https://github.com/handewo/ratatui.git#a00a8adc9bc6bab089bee9a565eee9334fa81c28"
 dependencies = [
  "cfg-if",
- "crossterm",
+ "crossterm 0.29.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "instability",
  "ratatui-core",
 ]
@@ -1306,8 +1319,7 @@ dependencies = [
 [[package]]
 name = "ratatui-macros"
 version = "0.7.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a7f1342a13e83e4bb9d0b793d0ea762be633f9582048c892ae9041ef39c936f4"
+source = "git+https://github.com/handewo/ratatui.git#a00a8adc9bc6bab089bee9a565eee9334fa81c28"
 dependencies = [
  "ratatui-core",
  "ratatui-widgets",
@@ -1316,8 +1328,7 @@ dependencies = [
 [[package]]
 name = "ratatui-termwiz"
 version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0f76fe0bd0ed4295f0321b1676732e2454024c15a35d01904ddb315afd3d545c"
+source = "git+https://github.com/handewo/ratatui.git#a00a8adc9bc6bab089bee9a565eee9334fa81c28"
 dependencies = [
  "ratatui-core",
  "termwiz",
@@ -1326,8 +1337,7 @@ dependencies = [
 [[package]]
 name = "ratatui-widgets"
 version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d7dbfa023cd4e604c2553483820c5fe8aa9d71a42eea5aa77c6e7f35756612db"
+source = "git+https://github.com/handewo/ratatui.git#a00a8adc9bc6bab089bee9a565eee9334fa81c28"
 dependencies = [
  "bitflags 2.11.0",
  "hashbrown 0.16.1",
@@ -1928,7 +1938,7 @@ version = "0.3.3"
 dependencies = [
  "bytes",
  "criterion",
- "crossterm",
+ "crossterm 0.29.0 (git+https://github.com/handewo/crossterm.git)",
  "divan",
  "iai",
  "insta",
@@ -1998,9 +2008,9 @@ checksum = "06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821"
 
 [[package]]
 name = "uuid"
-version = "1.21.0"
+version = "1.23.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b672338555252d43fd2240c714dc444b8c6fb0a5c5335e65a07bba7742735ddb"
+checksum = "5ac8b6f42ead25368cf5b098aeb3dc8a1a2c05a3eee8a9a1a68c640edbfc79d9"
 dependencies = [
  "atomic",
  "getrandom 0.4.1",
